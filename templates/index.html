@@ -1,1 +1,120 @@
-ECHO is on.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron text-center">
+          <h1>Mission to Mars</h1>
+          <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+    
+        <!-- Mars Info -->
+        <div class="row" id="mars-info">
+          <div class="col-md-12">
+            <h2>Latest Mars News</h2>
+            <h4 class="heading">{{solarsystem.News_Title}}</h4>
+            <small>{{solarsystem.Text}}</small>
+          </div>
+        </div>
+
+        <div class="row" id="mars-image-and-table">
+          <div class="col-md-12">
+
+        <!-- Featured Image -->
+      <div class="row" id="mars featured image">
+        <div class="col-md-6">
+
+          <h2 class="heading">Featured Mars Image</h2>
+          
+        <img src="{{ solarsystem.Featured_Image }}" alt="Responsive image" class="img responsive">
+        </div>
+      </div>
+
+      <!-- Mars Info -->
+      <div class="row" id="mars-facts">
+        <div class="col-md-6">
+          <h2>Mars Facts</h2>
+
+      <table border="1" class="dataframe">
+        <thead>
+          <tr style="text-align: right;">
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mars - Earth Comparison</td>
+            <td>Mars</td>
+            <td>Earth</td>
+          </tr>
+          <tr>
+            <td>Diameter:</td>
+            <td>6,779 km</td>
+            <td>12,742 km</td>
+          </tr>
+          <tr>
+            <td>Mass:</td>
+            <td>6.39 × 10^23 kg</td>
+            <td>5.97 × 10^24 kg</td>
+          </tr>
+          <tr>
+            <td>Moons:</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Distance from Sun:</td>
+            <td>227,943,824 km</td>
+            <td>149,598,262 km</td>
+          </tr>
+          <tr>
+            <td>Length of Year:</td>
+            <td>687 Earth days</td>
+            <td>365.24 days</td>
+          </tr>
+          <tr>
+            <td>Temperature:</td>
+            <td>-87 to -5 °C</td>
+            <td>-88 to 58°C</td>
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+  </div>
+          </div>
+        </div>
+
+
+        <!-- Mars Hemispheres -->
+        <div class="row" id="mars hemispheres">
+          <div class="col-md-12">
+  
+            <h2 class="heading">Mars Hemispheres</h2>
+  
+          <img src="{{ solarsystem.Cerberus_Img }}" alt="Responsive image" class="img responsive" class="col-sm-6 col-md-3" style="width:20%";>
+          <img src="{{ solarsystem.Schiaparelli_Img }}" alt="Responsive image" class="img responsive" class="col-sm-6 col-md-3" style="width:20%";>
+          <img src="{{ solarsystem.Syrtis_Img }}" alt="Responsive image" class="img responsive" class="col-sm-6 col-md-3" style="width:20%";>
+          <img src="{{ solarsystem.Valles_Img }}" alt="Responsive image" class="img responsive" class="col-sm-6 col-md-3" style="width:20%";>
+          </div>
+        </div>
+
+
+
+    
+      </div>
+
+</body>
+
+</html>
